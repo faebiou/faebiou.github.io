@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap');
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --red:   #ff0208;
+    --white: #ffffff;
+    --black: #000000;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red:   #08fb92;
+    --white: #000000;
+    --black: #ffffff;
+  }
+}
+
+@media only screen and (min-device-width: 320px) {
+  .wrap { max-width: 75vw }
+  h1 { font-size: 5em }
+  h2 { font-size: 4em }
+  h3 { font-size: 3em }
+  p, li  { font-size: 2em }
+}
+
+@media only screen and (min-device-width: 860px) {
+  .wrap { max-width: 50vw }
+  h1 { font-size: 3em }
+  h2 { font-size: 3.2em }
+  h3 { font-size: 1.8em }
+  p, li  { font-size: 1.8em }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .wrap { max-width: 40vw }
+  h1 { font-size: 3em }
+  h2 { font-size: 2.1em }
+  h3 { font-size: 1.2em }
+  p, li  { font-size: 1.2em }
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Recursive';
+  font-size: 1.3vw;
+}
+
+.wrap { margin: auto; }
+
+hr.blk {
+  border: 3px solid var(--black);
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+hr.red {
+  border: 3px solid var(--red);
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+hr.nope {
+  border: 3px solid var(--white);
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+h1 {
+  font-weight: 900;
+  margin-top: 10vh;
+}
+
+h2 {
+  font-weight: 500;
+  color: var(--red);
+  margin-top: 2vh;
+}
+
+h3 {
+  /* font-size: 1.6em; */
+  font-weight: 850;
+  font-variation-settings: "CRSV" 1;
+  margin-top: 8vh;
+  margin-bottom: 2vh;
+}
+
+p {
+  margin-top: auto;
+  margin-bottom: 1.6vh;
+  line-height: 1.6;
+}
+
+#last {
+  margin-bottom: 20vh;
+}
+
+strong {
+  font-weight: 850;
+}
+
+li {
+  margin-bottom: 1.2vh;
+}
+
+img {
+  margin-top: 6vh;
+  position: absolute;
+  max-width: 40vw;
+  right: 0px;
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 700;
+}
+a:hover {
+  color: var(--black);
+}
