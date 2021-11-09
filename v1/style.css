@@ -15,79 +15,78 @@
   }
 }
 
-@media only screen and (min-device-width: 320px) {
+@media only screen and (min-device-width: 0px) {
   .wrap { max-width: 75vw }
-  h1 { font-size: 5em }
-  h2 { font-size: 4em }
-  h3 { font-size: 3em }
+  h1 { font-size: 6em; margin-bottom: auto;}
+  h2 { font-size: 3em; margin-top: 1vh;}
+  h3 { font-size: 3.5em;
+       margin-bottom: vh;
+       margin-top: 5vh; }
   p, li  { font-size: 2em }
 }
-
-@media only screen and (min-device-width: 860px) {
+@media only screen and (min-device-width: 768px) {
   .wrap { max-width: 50vw }
   h1 { font-size: 3em }
-  h2 { font-size: 3.2em }
-  h3 { font-size: 1.8em }
+  h2 { font-size: 2.4em }
+  h3 { font-size: 2.3em;
+       margin-bottom: 2vh;
+       margin-top: 6vh; }
   p, li  { font-size: 1.8em }
 }
+@media only screen and (min-device-width: 1080px) {
+  .wrap {max-width: 50vw}
+  h2 {font-size: 1.8em }
+  h3 { font-size: 1.8em;
+    margin-bottom: 3vh;
+    margin-top: 7vh;
+  }
+  p, li { font-size: 1.2em; }
 
-@media only screen and (min-device-width: 1024px) {
-  .wrap { max-width: 40vw }
-  h1 { font-size: 3em }
-  h2 { font-size: 2.1em }
-  h3 { font-size: 1.2em }
-  p, li  { font-size: 1.2em }
 }
 
 body {
   background: var(--white);
   color: var(--black);
-  font-family: 'Recursive';
+  font-family: 'Recursive', monospace;
   font-size: 1.3vw;
 }
 
 .wrap { margin: auto; }
 
 hr.blk {
-  border: 3px solid var(--black);
+  border: 2px solid var(--black);
   margin-top: 4vh;
   margin-bottom: 4vh;
 }
-
 hr.red {
-  border: 3px solid var(--red);
+  border: 2px solid var(--red);
   margin-top: 4vh;
   margin-bottom: 4vh;
 }
-
 hr.nope {
-  border: 3px solid var(--white);
-  margin-top: 4vh;
-  margin-bottom: 4vh;
+  border: 2px solid var(--white);
+  margin-top: 6vh;
+  margin-bottom: 6vh;
 }
 
 h1 {
   font-weight: 900;
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 
 h2 {
   font-weight: 500;
   color: var(--red);
-  margin-top: 2vh;
 }
 
 h3 {
   /* font-size: 1.6em; */
   font-weight: 850;
   font-variation-settings: "CRSV" 1;
-  margin-top: 8vh;
-  margin-bottom: 2vh;
+  line-height: 0;
 }
 
 p {
-  margin-top: auto;
-  margin-bottom: 1.6vh;
   line-height: 1.6;
 }
 
@@ -99,8 +98,13 @@ strong {
   font-weight: 850;
 }
 
+#mani {
+  color: var(--red);
+}
+
 li {
   margin-bottom: 1.2vh;
+  line-height: 1.6;
 }
 
 img {

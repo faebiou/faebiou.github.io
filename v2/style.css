@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap');
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --red:   #ff0208;
+    --white: #ffffff;
+    --black: #000000;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red:   #08fb92;
+    --white: #000000;
+    --black: #ffffff;
+  }
+}
+
+@media only screen and (min-device-width: 0px) {
+  hr.red {
+    margin-top: 6em;
+    margin-bottom: 5em;
+  }
+  .wrap { max-width: 75vw }
+  h1 {
+    font-size: 6em;
+    margin-bottom: auto;
+  }
+  h2 {
+    font-size: 3em;
+    margin-top: 1vh;
+  }
+  h3 {
+    font-size: 3.5em;
+    margin-top: 5vh; }
+  p, li  { font-size: 2em }
+}
+@media only screen and (min-device-width: 768px) {
+  hr.red {
+    margin-top: 4em;
+    margin-bottom: 3em;
+  }
+  .wrap { max-width: 50vw }
+  h1 { font-size: 3em }
+  h2 { font-size: 2.4em }
+  h3 {
+    font-size: 2.3em;
+    margin-bottom: 2vh;
+    margin-top: 6vh; }
+  p, li  { font-size: 1.8em }
+}
+@media only screen and (min-device-width: 1080px) {
+  hr.red {
+    margin-top: 4em;
+    margin-bottom: 2.3em;
+  }
+  .wrap {max-width: 50vw}
+  h2 {font-size: 1.8em }
+  h3 {
+    font-size: 1.8em;
+    margin-bottom: 3vh;
+    margin-top: 8vh;
+  }
+  p, li { font-size: 1.2em; }
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Recursive', monospace;
+  font-size: 1.3vw;
+}
+h1 {
+  font-weight: 900;
+  margin-top: 8vh;
+}
+h2 {
+  font-weight: 500;
+  color: var(--red);
+}
+h3 {
+  /* font-size: 1.6em; */
+  font-weight: 850;
+  font-variation-settings: "CRSV" 1;
+  line-height: 0;
+}
+p {
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: 850;
+}
+li {
+  margin-bottom: 1.2vh;
+  line-height: 1.6;
+}
+a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 700;
+}
+a:hover {
+  color: var(--black);
+}
+
+.wrap { margin: auto; }
+
+hr.red {
+  border: 2px solid var(--red);
+}
+hr.nope {
+  border: 2px solid var(--white);
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+.lined {
+  margin-top: auto;
+}
+
+#mani {
+  color: var(--red);
+}
+
+#last {
+  margin-top: 10vh;
+  margin-bottom: auto;
+}
+
+img {
+  margin-top: 6vh;
+  position: absolute;
+  max-width: 40vw;
+  right: 0px;
+}
