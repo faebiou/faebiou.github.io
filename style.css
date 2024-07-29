@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
     --darkGray: #333333;
     --duhWhite: #ffffff;
     --neonGreen: #33ff77;
     --neonRed: #e61728;
 }
-
 @media (prefers-color-scheme: light){
     body { background-color: var(--duhWhite); }
     h2 {color: var(--neonRed); }
@@ -26,35 +24,33 @@ body {
     font-family: 'IBM Plex Mono';
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+
     margin-left: 1rem;
     margin-right: 1rem;
-    max-width: 640px;
-    min-height: 100vh;
+    max-width: 425px;
 }
 
 p {
+    margin-block-start: 0;
+
     font-size: 1rem;
     line-height: 1.6rem;
-    margin-block-start: 0;
     margin-block-end: 1rem;
 }
 
 h2 {
-    font-size: 1.6rem;
-    margin-block-start: 2rem;
-    margin-block-end: .8rem;
     font-weight: 900;
+
+    font-size: 2rem;
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
 }
 
 a {
     text-decoration: underline;
-    text-underline-offset: .2rem;
-}
-a:hover {
-    font-weight: 900;
-}
-.italic {
-    font-style: italic;
+
+    text-underline-offset: .12rem;
 }
 
 #lastLine {
@@ -62,11 +58,19 @@ a:hover {
 }
 
 #colofon {
-    font-size: .8em;
     margin-top: auto;
-    margin-bottom: 1.1rem;
-    text-underline-offset: .3rem;
 
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+/* -------------------- */
+
+a:hover {
+    font-weight: 900;
+}
+.italic {
+    font-style: italic;
 }
 
 @media (min-width: 425px) {
@@ -83,10 +87,13 @@ a:hover {
     }
 
     h2 {
+        font-size: 2.2rem;
         margin-block-start: 4rem;
-        margin-block-end: .9rem;
-        font-size: 1.8rem;
-        font-weight: 900;
+        margin-block-end: 1.1rem;
+    }
+
+    a {
+        text-underline-offset: .18rem;
     }
 
     #lastLine {
@@ -95,8 +102,7 @@ a:hover {
 
     #colofon {
         font-size: .9rem;
-        margin-top: auto;
-        margin-bottom: 2.2rem;
+        margin-block-end: 2rem;
     }
 
 }
@@ -109,14 +115,18 @@ a:hover {
 
     p {
        font-size: 1.4rem;
-       line-height: 2.2rem;
+       line-height: 2rem;
        margin-block-end: 1.4rem;
     }
 
     h2 {
+        font-size: 2.4rem;
         margin-block-start: 6rem;
-        font-size: 2.2rem;
-        font-weight: 900;
+        margin-block-end: 1.2rem;
+    }
+
+    a {
+        text-underline-offset: .2rem;
     }
 
     #lastLine {
@@ -125,8 +135,7 @@ a:hover {
 
     #colofon {
         font-size: 1rem;
-        margin-top: auto;
-        margin-bottom: 2.2rem;
+        margin-block-end: 3rem;
     }
 
 }
