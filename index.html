@@ -1,134 +1,40 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-<title></title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Pop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="random-color">
+    <script>
+    const colors = ['#ffd2d2', '#ffeea9', '#b3ffcc', '#94ebff', '#e1e1ff', '#ffc0e9'];
+    //const colors = ['#b3ffcc'];
+    const elements = document.querySelectorAll('.random-color');
+    elements.forEach(element => {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        element.style.backgroundColor = randomColor;
+    });
+</script>
+    <h2 id="hi">Hi.</h2>
 
-<style>
+        <p>My name is Fabio Pop and I like letters, colors, motion, and code. I am available for <span class="italic">client work</span> but I also do <span class="italic">freelance consultancy</span> to help if you’re feeling stuck on, perplexed by, or enraged over a project.</p>
 
-body {
+        <p>I’m not not here to pretend that I have all the answers, easy solutions, and quick fixes. Or anything, really.</p>
 
-	background-image: url('grunge_patterns.jpg');
-	background-attachment: fixed;
-	color: #333;
-}
+        <p>The only thing I have to offer is a <span class="italic">fresh set of eyes</span> that might see things that you might have missed. But make no mistake: that's not insight or experience. It's <span class="italic">distance.</span> And that might sometimes be difficult to reach alone.</p>
 
-.box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
-}
+        <p>So don’t hesitate to get in touch if you’re stuck with anything related to typography, type design, lettering, branding, motion graphics, creative coding, or just want to vent about a project or something.</p>
 
-.lightbox {
-	zoom: 1.5;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	text-align: center;
-	margin: auto;
+        <p id="lastLine">Find me <a href="mailto:hi@faebiou.com">here</a>, on <a href="http://instagram.com/faebiou" target="_blank">instagram</a>, or on <a href="http://typo.social/@faebiou" target="_blank">mastodon</a></p>
 
-}
+        <div id="colofon">
+            <p>Made with ♥ & set in <a href="http://boldmonday.com">Plex</a> of course.</p>
+            
+        </div>
 
-div.horizontal {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-
-div.vertical {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-}
-
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-</style>
-
-<body>
-
-	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
-	<script type="text/javascript">
-	"use strict";
-
-
-	function loadPage(pwd) {
-
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
-
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
-
-				window.location= url;
-
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
-
-
-				parent.location.hash= hash;
-
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
-
-
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
-
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
-
-	</script>
 
 </body>
 </html>
+
