@@ -20,6 +20,11 @@
     #heart { color: var(--neonGreen) }
 }
 
+.center {
+    text-align: center;
+    margin: auto;
+}
+
 body {
     font-family: 'IBM Plex Mono';
     display: flex;
