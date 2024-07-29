@@ -1,8 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --darkGray: #333333;
+    --duhWhite: #ffffff;
+
+    --neonGreen: #33ff77;
+
+    --neonPurple: #5252cc;
+}
+
+@media (prefers-color-scheme: light){
+    body { background-color: var(--duhWhite); }
+    h2 {color: var(--neonPurple); }
+    p { color: var(--darkGray); }
+    a { color: var(--neonPurple); }
+    #heart { color: var(--neonPurple) }
+}
+
+@media (prefers-color-scheme: dark){
+    body { background-color: var(--darkGray); }
+    h2 { color: var(--neonGreen); }
+    p { color: var(--duhWhite); }
+    a { color: var(--neonGreen); }
+    #heart { color: var(--neonGreen) }
+}
+
 body {
     font-family: 'IBM Plex Mono';
-    color: black;
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
@@ -26,8 +50,8 @@ h2 {
 }
 
 a {
-    color: black;
     text-decoration: underline;
+    text-underline-offset: .2rem;
 }
 a:hover {
     font-weight: 900;
@@ -44,6 +68,8 @@ a:hover {
     font-size: .8em;
     margin-top: auto;
     margin-bottom: 1rem;
+    text-underline-offset: .3rem;
+
 }
 
 @media (min-width: 425px) {
@@ -71,7 +97,7 @@ a:hover {
     }
 
     #colofon {
-        font-size: 1rem;
+        font-size: .9rem;
         margin-top: auto;
         margin-bottom: 2.2rem;
     }
@@ -81,7 +107,7 @@ a:hover {
 @media (min-width: 1024px) {
     body {
         margin-left: 12vw;
-        max-width: 640px;
+        max-width: 580px;
     }
 
     p {
@@ -97,7 +123,7 @@ a:hover {
     }
 
     #colofon {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin-top: auto;
         margin-bottom: 2.2rem;
     }
