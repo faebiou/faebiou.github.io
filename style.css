@@ -25,17 +25,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 25rem;
 
     margin-left: 1rem;
     margin-right: 1rem;
-    max-width: 425px;
 }
 
 p {
     margin-block-start: 0;
 
     font-size: 1rem;
-    line-height: 1.6rem;
+    line-height: 1.4rem;
     margin-block-end: 1rem;
 }
 
@@ -73,11 +73,11 @@ a:hover {
     font-style: italic;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 450px) {
     body {
         margin-left: 10vw;
         margin-right: 5vw;
-        max-width: 512px;
+        max-width: 28rem;
     }
 
     p {
@@ -110,7 +110,8 @@ a:hover {
 @media (min-width: 1024px) {
     body {
         margin-left: 12vw;
-        max-width: 580px;
+        max-width: 32rem;
+
     }
 
     p {
