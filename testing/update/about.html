@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Fabio Pop</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><img src="assets/favicon.svg" width="36" height="36"></a></li>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="lefts.html">Lefts</a></li>
+            <li><a href="fonts.html">Fonts</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="index.html"><img src="assets/favicon.svg" width="36" height="36"></a></li>
+            <li class="hideOnMobile"><a href="lefts.html">Lefts</a></li>
+            <li class="hideOnMobile"><a href="fonts.html">Fonts</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><img src="assets/favicon.svg" width="36" height="36"></a></li>
+        </ul>
+    </nav>
+
+    <div class="wrap">
+        <p>Hi. My name is Fabio Pop and I am a freelance type designer and occasional graphic design consultant.</p>
+
+        <p>I am currently working on <a href="emfiftynine.html">some fonts</a> and have started <a href="lefts.html">a blog</a> (is that still a thing?) about fake clients and real work. I also play drums in <a href="http://instagram.com/zakuszka.live" target="_blank">a band</a> and enjoy <a href="http://www.instagram.com/sacc.kabe" target="_blank">terrible puns</a> in Hungarian. A niche market, I know.</p>
+        
+        <p>Get in touch if you’re feeling stuck on, perplexed by or enraged over a project, if you need a hand with anything related to typography, branding, creative coding, motion graphics – or just want to vent about a project or client or something.</p>
+
+        <p>Find me on <a href="http://instagram.com/faebiou" target="_blank">instagram</a> or <a href="http://typo.social/@faebiou" target="_blank">mastodon</a> or say hi via <a href="mailto:hi@faebiou.com">hi@faebiou.com</a>.</p>
+
+        <p id="colofon">Made with <span id="heart">♥</span> & set in <a href="http://boldmonday.com">Plex</a> of course.</p>
+   
+    </div>
+    
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+

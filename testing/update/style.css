@@ -1,0 +1,112 @@
+:root {
+/*    --darkGray: #333333;
+    --duhWhite: #ffffff;
+    --neonGreen: #33ff77;
+    --neonRed: #e61728;
+*/    
+    --darkGray: #333333;
+    --duhWhite: #ffffff;
+    --neonGreen: #ffffff;
+    --neonRed: #333333;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IBM Plex Mono', mono;
+    min-height: 100vh;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em 0 1em;
+    padding-top: 2em;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-block-end: .8em;
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: .12em;
+}
+
+a:hover {
+    font-weight: 900;
+}
+
+.italic { 
+    font-style: italic;
+}
+
+nav {
+    background-color: #EEEEEE;
+    text-transform: uppercase;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+nav li {
+    height: 3em;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 999;
+    background-color: #EEEEEE;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+.header {
+    margin: auto;
+    padding: 1em 1em 0 1em;
+/*    max-width: 1024px;*/
+}
