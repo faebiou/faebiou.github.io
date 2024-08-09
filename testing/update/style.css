@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
 /*    --darkGray: #333333;
     --duhWhite: #ffffff;
@@ -8,7 +9,6 @@
     --duhWhite: #ffffff;
     --neonGreen: #ffffff;
     --neonRed: #333333;
-
 }
 
 * {
@@ -107,6 +107,11 @@ nav li:first-child {
 
 .header {
     margin: auto;
-    padding: 1em 1em 0 1em;
-/*    max-width: 1024px;*/
+}
+
+#colofon {
+    margin-top: auto;
+
+    font-size: .8rem;
+    margin-bottom: 2rem;
 }
