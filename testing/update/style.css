@@ -1,4 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: "Normavaganza";
+    src: url(assets/Normavaganza_VF-VF-styl0.0.ttf);
+}
+
+@font-face {
+    font-family: "Normavaganza Italic";
+    src: url(assets/Normavaganza_VF-VF-styl1.0.ttf);
+}
+
+@font-face {
+    font-family: "Normavaganza Extra";
+    src: url(assets/Normavaganza_VF-VF-styl2.0.ttf);
+}
+
+@font-face {
+    font-family: "MF Senza";
+    src: url(assets/MFSenzaText-Regular.otf);
+}
+
 :root {
 /*    --darkGray: #333333;
     --duhWhite: #ffffff;
@@ -17,7 +37,8 @@
 }
 
 body {
-    font-family: 'IBM Plex Mono', mono;
+    font-family: 'Normavaganza', sans-serif;
+    font-weight: 400;
     min-height: 100vh;
 }
 
@@ -29,7 +50,7 @@ body {
 }
 
 h2 {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 2em;
 }
 
@@ -40,13 +61,13 @@ p {
 }
 
 a {
-    text-decoration: underline;
-    text-underline-offset: .12em;
+/*    text-decoration: underline;
+    text-underline-offset: .12em; */
+    text-decoration: none;
+    font-weight: 700;    
 }
 
-a:hover {
-    font-weight: 900;
-}
+
 
 .italic { 
     font-style: italic;
@@ -68,7 +89,9 @@ nav ul {
 }
 
 nav li {
-    height: 3em;
+    font-family: "MF Senza", sans-serif;
+    text-align: center;
+    height: 4em;
 }
 
 nav a {
@@ -107,11 +130,21 @@ nav li:first-child {
 
 .header {
     margin: auto;
+    padding: auto 1em auto 1em;
+    max-width: 1200px;
 }
 
 #colofon {
     margin-top: auto;
+    padding-top: 2em;
+/*    margin-left: auto;*/
+    margin-right: auto;
 
-    font-size: .8rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
+}
+
+.bigass {
+    margin: auto;
+    max-width: 1200px;
 }
