@@ -152,3 +152,12 @@ nav li:first-child {
     margin: auto;
     max-width: 1200px;
 }
+
+#first {
+    margin-top: .5em;
+}
+
+.svgImg {
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
