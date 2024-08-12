@@ -36,17 +36,24 @@
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     font-family: 'Normavaganza', sans-serif;
     font-weight: 400;
     min-height: 100vh;
+
+    overflow-x: scroll;
 }
 
 .wrap {
     display: flex;
     flex-direction: column;
     margin: 0 1em 0 1em;
-    padding-top: 2em;
+/*    padding-top: 2em;*/
+    padding-top: 1em;
 }
 
 h2 {
@@ -67,8 +74,6 @@ a {
     font-weight: 700;    
 }
 
-
-
 .italic { 
     font-style: italic;
 }
@@ -84,7 +89,7 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -136,12 +141,11 @@ nav li:first-child {
 
 #colofon {
     margin-top: auto;
-    padding-top: 2em;
-/*    margin-left: auto;*/
     margin-right: auto;
 
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: .7em;
+    line-height: 130%;
+    margin-block-end: 5em;
 }
 
 .bigass {

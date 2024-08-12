@@ -10,6 +10,7 @@
     h2 { color: var(--neonGreen); }
     p { color: var(--duhWhite); }
     a { color: var(--neonGreen); }
+    nav, .sidebar { background-color: #666666; }
     #heart { color: var(--neonGreen) }
 }
 
@@ -37,7 +38,7 @@
     .wrap {
         margin: auto;
         padding: 2.2em 3em 0 3em;
-        max-width: 480px;
+        max-width: 500px;
     }
 
     p {
@@ -51,26 +52,21 @@
     }
 
     a {
-        text-underline-offset: .18rem;
-    }
-
-    #lastLine {
-        margin-bottom: 8rem;
+        text-underline-offset: .18em;
     }
 
     #colofon {
-        font-size: .9rem;
-        margin-block-end: 2rem;
+        font-size: 1em;
     }
 }
 
 @media (min-width: 1200px) {
-    navbar ul {
+    .navbar ul {
         max-width: 1200px;
     }
 
     .wrap {
-        max-width: 680px;
+        max-width: 700px;
         padding-top: 2.6em;
     }
 
@@ -93,8 +89,7 @@
     }
 
     #colofon {
-        font-size: 1em;
-        margin-block-end: 3em;
+        font-size: 1.2em;
     }
 
 }
