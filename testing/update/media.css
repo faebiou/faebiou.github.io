@@ -52,6 +52,7 @@
     }
 
     a {
+        font-weight: 700;
         text-underline-offset: .18em;
     }
 }
@@ -77,6 +78,7 @@
     }
 
     a {
+        font-weight: 700;
         text-underline-offset: .2em;
     }
 
