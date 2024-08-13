@@ -15,9 +15,15 @@
 }
 
 @font-face {
-    font-family: "MF Senza";
+    font-family: "MF Senza Text Regular";
     src: url(assets/MFSenzaText-Regular.otf);
 }
+
+@font-face {
+    font-family: "MF Senza Text Bold";
+    src: url(assets/MFSenzaText-Bold.otf);
+}
+
 
 :root {
 /*    --darkGray: #333333;
@@ -44,7 +50,6 @@ body {
     font-family: 'Normavaganza', sans-serif;
     font-weight: 400;
     min-height: 100vh;
-
     overflow-x: scroll;
 }
 
@@ -94,9 +99,9 @@ nav ul {
 }
 
 nav li {
-    font-family: "MF Senza", sans-serif;
-    letter-spacing: .05em;
+    font-family: "MF Senza Text Bold", sans-serif;
     text-align: center;
+    letter-spacing: .03em;
     height: 4em;
 }
 
