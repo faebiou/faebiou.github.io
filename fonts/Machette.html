@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF Machette by Fabio Pop</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../media.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><img src="../assets/favicon.svg" width="50" height="50"></a></li>
+            <li><a href="../index.html">Projects</a></li>
+            <li><a href="../about.html">About</a></li>
+            <!-- <li><a href="lefts.html">Lefts</a></li> -->
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="../index.html"><img src="../assets/favicon.svg" width="50" height="50"></a></li>
+            <li class="hideOnMobile"><a href="../index.html">Projects</a></li>
+            <li class="hideOnMobile"><a href="../about.html">About</a></li>
+            <!-- <li class="hideOnMobile"><a href="lefts.html">Lefts</a></li> -->
+            <li class="menu-button" onclick=showSidebar()><a href="#"><img src="../assets/favicon.svg" width="50" height="50"></a></li>
+        </ul>
+    </nav>
+    <div class="bigass">
+        <a href="../index.html"><img src="SVG/Machette.svg"></a>
+    </div>
+    <footer class="wrap">
+        <p id="colofon">The project on this page is very much still in progress. It hasn&rsquo;t been released yet and it&rsquo;s not mastered or otherwise refined. It will get updates over time, but <a href="../about.html">let me know</a> if you&rsquo;d like to know more in the meantime.</p>
+    </footer>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
