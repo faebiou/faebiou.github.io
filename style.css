@@ -170,3 +170,7 @@ nav li:first-child {
     margin-top: .2em;
     margin-bottom: .2em;
 }
+
+#logoBig {
+    margin-top: 3em;
+}
