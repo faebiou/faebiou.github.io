@@ -54,6 +54,10 @@
     a {
         text-underline-offset: .18em;
     }
+
+    #colofon {
+        font-size: .9em;
+    }
 }
 
 @media (min-width: 1200px) {
