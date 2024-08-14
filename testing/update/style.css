@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
-    font-family: "Normavaganza";
-    src: url(assets/Normavaganza_VF-VF-styl0.0.ttf);
+    font-family: "MF Norma Text Regular";
+    src: url(assets/MF_Norma/MFNormaText-Regular.otf);
 }
 
 @font-face {
-    font-family: "Normavaganza Italic";
-    src: url(assets/Normavaganza_VF-VF-styl1.0.ttf);
+    font-family: "MF Norma Text Italic";
+    src: url(assets/MF_Norma/MFNormaText-Italic.otf);
+}
+
+@font-face {
+    font-family: "MF Norma Text Bold";
+    src: url(assets/MF_Norma/MFNormaText-Bold.otf);
 }
 
 @font-face {
@@ -47,7 +52,7 @@ html {
 }
 
 body {
-    font-family: 'Normavaganza', sans-serif;
+    font-family: 'MF Norma Text Regular', sans-serif;
     font-weight: 400;
     min-height: 100vh;
     overflow-x: scroll;
@@ -75,8 +80,9 @@ p {
 a {
 /*    text-decoration: underline;
     text-underline-offset: .12em; */
+    font-family: "MF Norma Text Bold";
     text-decoration: none;
-    font-weight: 700;    
+     
 }
 
 .italic { 
@@ -99,13 +105,11 @@ nav ul {
 }
 
 nav li {
-    font-family: "MF Senza Text Bold", sans-serif;
-    text-align: center;
-    letter-spacing: .03em;
     height: 4em;
 }
 
 nav a {
+    font-family: "MF Senza Text Bold";
     height: 100%;
     padding: 0 1em;
     display: flex;
