@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #110e40;
+      }
+
+      .cls-2 {
+        fill: #38d1ff;
+        font-family: NewFont-Regular, 'MF Strapa';
+        font-size: 67.43px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="0" y="-.63" width="480" height="181.25"/>
+  <text class="cls-2" transform="translate(117.46 112.17)"><tspan class="cls-4" x="0" y="0">BU</tspan><tspan class="cls-5" x="110.52" y="0">S</tspan><tspan class="cls-3" x="154.15" y="0">T</tspan><tspan x="193.53" y="0">O</tspan></text>
+</svg>
