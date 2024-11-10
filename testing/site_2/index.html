@@ -92,7 +92,7 @@
             height: 100vh;
         }
 
-        @media (max-width: 1080px) {
+        /* @media (max-width: 1080px) {
 
             :root {
                 --divider: 40%;
@@ -138,10 +138,11 @@
             }
 
         }
-        
+         */
 
     </style>
 </head>
+<body>
     <div class="container">
 
         <div class="navbar">
@@ -159,10 +160,13 @@
             </div>
         </div>
         
-        <div class="right">
-            <object id="svg1" class="svg-container" type="image/svg+xml" data="Busto_new.svg"></object>
-            <object id="svg2" class="svg-container" type="image/svg+xml" data="Gnarly_new.svg"></object>
-    </div>
+        <div id="svg1" class="svg-container">
+                <img src="Busto_new.svg" alt="Busto">
+        </div>
+        <div id="svg2" class="svg-container">
+                <img src="Gnarly_new.svg" alt="Gnarly">
+            </svg>
+        </div>
     <script>
         const svgs = document.querySelectorAll('.svg-container');
         let index = 0;
@@ -170,13 +174,18 @@
         function getDisplayStyle() {
             return window.matchMedia("(max-width: 768px)").matches ? 'block' : 'flex';
         }
+
         function showNextSVG() {
-            svgs.forEach((svg, i) => svg.style.display = i === index ? getDisplayStyle() : 'none');
-                index = (index + 1) % svgs.length;
-            setTimeout(showNextSVG, 1000);
+            svgs.forEach(function(svg, i) {
+                svg.style.display = (i === index) ? getDisplayStyle() : 'none';
+            });
+            index = (index + 1) % svgs.length;
         }
 
-        showNextSVG();
+        document.addEventListener('DOMContentLoaded', (event) => {
+            showNextSVG();
+            setInterval(showNextSVG, 1000);
+        });
         
     </script>
 </body>
