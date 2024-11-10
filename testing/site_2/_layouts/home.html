@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works by Fabio Pop</title>
+    <style>
+        :root {
+            --divider: 45%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 1em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            z-index: 1000;
+        }
+
+        .nav-button {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: .3em .9em;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'MF Senza Text Bold';
+            font-size: 1em;
+            border: #FFFFFF solid .1em;
+        }
+
+        .left {
+            width: calc(var(--divider));
+        }
+
+        .container {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .intro-text {
+            font-family: 'MF Senza Text';
+            margin-top: 6em;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            font-size: 1.3em;
+            line-height: 1.3;
+        }
+
+        .intro-text a {
+            color: #000000;
+            text-decoration: none;
+            font-family: 'MF Senza Text Bold';
+        }
+        
+        #bigLogo {
+            width: 6em;
+            height: 6em;
+            margin: auto;
+            background: url('/_includes/favicon.svg') no-repeat center center;
+            background-size: contain;
+        }
+
+        .right {
+            width: calc(100% - var(--divider));
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .svg-container {
+            margin: 0;
+            display: none;
+            height: 100vh;
+        }
+
+        @media (max-width: 1080px) {
+
+            :root {
+                --divider: 40%;
+            }
+
+            .left {
+                width: calc(var(--divider));
+            }
+            
+            .right {
+                width: calc(100% - var(--divider));
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            
+            .container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                order: -1;
+                width: 100%;
+            }
+            
+            .svg-container {
+                height: auto;
+                width: 100%;
+            }
+            
+            .intro-text {
+                font-size: 1.1em;
+                margin-top: 5vw;
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+        }
+
+    </style>
+</head>
+    <div class="container">
+
+        <div class="navbar">
+            <a href="#home" class="nav-button">Home</a>
+            <a href="#M59" class="nav-button">M59</a>
+            <a href="#lefts" class="nav-button">Lefts</a>
+        </div>
+    
+        <div class="left">
+            <div class="intro-text">
+                <p>Hi. My name is Fabio Pop and I am a freelance type designer currently working on <a href="/M59">fonts</a> like the one you are reading now. I also play drums in a <a href="https://instagram.com/zakuszka.live" target="_blank">band,</a> enjoy terrible <a href="https://instagram.com/sacc.kabe" target="_blank">puns</a> in Hungarian, and I live in The Hague.</p>
+                <p>Besides type, I am available as a freelance art director as well, so reach out if you need a hand with anything related to typography, branding, creative coding, or motion – or just want to vent for a bit or something.</p>
+                <p>Find me on <a href="https://instagram.com/faebiou">instagram</a> or <a href="https://typo.social/@faebiou">mastodon</a> or say hi via <a href="mailto:hi@faebiou.com">hi@faebiou.com</a></p>
+                <div id="bigLogo"></div>
+            </div>
+        </div>
+        
+        <div class="right">
+            <object id="svg1" class="svg-container" type="image/svg+xml" data="/_includes/svg/Busto_new.svg"></object>
+            <object id="svg2" class="svg-container" type="image/svg+xml" data="/_includes/svg/Gnarly_new.svg"></object>
+    </div>
+    <script>
+        const svgs = document.querySelectorAll('.svg-container');
+        let index = 0;
+        function showNextSVG() {
+            if (index > 0) {
+                svgs[index - 1].style.display = 'none';
+            }
+            if (index < svgs.length) {
+                svgs[index].style.display = 'flex';
+                index++;
+            } else {
+                svgs[index - 1].style.display = 'none';
+                index = 0;
+                svgs[index].style.display = 'flex';
+                index++;
+            }
+            setTimeout(showNextSVG, 1000);
+        }
+
+        showNextSVG();
+    </script>
+</body>
+</html>
