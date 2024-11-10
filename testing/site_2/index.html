@@ -170,24 +170,14 @@
         function getDisplayStyle() {
             return window.matchMedia("(max-width: 768px)").matches ? 'block' : 'flex';
         }
-
         function showNextSVG() {
-            if (index > 0) {
-                svgs[index - 1].style.display = 'none';
-            }
-            if (index < svgs.length) {
-                svgs[index].style.display = getDisplayStyle();
-                index++;
-            } else {
-                svgs[index - 1].style.display = 'none';
-                index = 0;
-                svgs[index].style.display = getDisplayStyle();
-                index++;
-            }
+            svgs.forEach((svg, i) => svg.style.display = i === index ? getDisplayStyle() : 'none');
+                index = (index + 1) % svgs.length;
             setTimeout(showNextSVG, 1000);
         }
 
         document.addEventListener('DOMContentLoaded', (event) => {
+            event.preventDefault();
             showNextSVG();
         });
         
