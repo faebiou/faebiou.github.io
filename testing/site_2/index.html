@@ -137,6 +137,7 @@
             }
 
         }
+        
 
     </style>
 </head>
@@ -164,17 +165,22 @@
     <script>
         const svgs = document.querySelectorAll('.svg-container');
         let index = 0;
+
+        function getDisplayStyle() {
+            return window.matchMedia("(max-width: 768px)").matches ? 'block' : 'flex';
+        }
+
         function showNextSVG() {
             if (index > 0) {
                 svgs[index - 1].style.display = 'none';
             }
             if (index < svgs.length) {
-                svgs[index].style.display = 'flex';
+                svgs[index].style.display = getDisplayStyle();
                 index++;
             } else {
                 svgs[index - 1].style.display = 'none';
                 index = 0;
-                svgs[index].style.display = 'flex';
+                svgs[index].style.display = getDisplayStyle();
                 index++;
             }
             setTimeout(showNextSVG, 1000);
