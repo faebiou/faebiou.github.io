@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,21 +6,17 @@
     <title>Works by Fabio Pop</title>
     <style>
         :root {
-            --divider: 45%;
+            --divider: 30%;
         }
+
         @font-face {
-            font-family: 'MF Senza Text';
-            src: url('MFSenzaText-Regular.otf') format('opentype');
+            font-family: 'MF Senza';
+            src: url('/Library/Fonts/MF_Senza-VF.ttf') format('opentype');
             font-weight: normal;
         }
-
-        @font-face {
-            font-family: 'MF Senza Text Bold';
-            src: url('MFSenzaText-Bold.otf') format('opentype');
-            font-weight: bold;
-        }
-
+        
         body {
+            font-family: 'MF Senza Text';
             margin: 0;
             padding: 0;
         }
@@ -29,46 +24,45 @@
         .navbar {
             position: fixed;
             top: 1em;
-            width: 100%;
+            width: 100%; 
             display: flex;
             justify-content: center;
             gap: 1em;
             z-index: 1000;
         }
-
+        
         .nav-button {
             background-color: #000000;
             color: #FFFFFF;
             padding: .3em .9em;
             text-decoration: none;
             text-transform: uppercase;
-            font-family: 'MF Senza Text Bold';
+            font-weight: 700;
             font-size: 1em;
-            border: #FFFFFF solid .1em;
+            /* border: #FFFFFF solid .1em; */
         }
-
+        
         .left {
             width: calc(var(--divider));
         }
-
+        
         .container {
             display: flex;
             overflow: hidden;
         }
-
+        
         .intro-text {
-            font-family: 'MF Senza Text';
-            margin-top: 6em;
+            margin-top: 30vh;
             margin-left: 5vw;
             margin-right: 5vw;
             font-size: 1.3em;
             line-height: 1.3;
         }
-
+        
         .intro-text a {
             color: #000000;
             text-decoration: none;
-            font-family: 'MF Senza Text Bold';
+            font-weight: 700;
         }
         
         #bigLogo {
@@ -78,38 +72,47 @@
             background: url('favicon.svg') no-repeat center center;
             background-size: contain;
         }
-
+        
         .right {
             width: calc(100% - var(--divider));
             overflow: hidden;
             display: flex;
             justify-content: center;
         }
-
+        
         .svg-container {
             margin: 0;
             display: none;
-            height: 100vh;
+            width: 100%;
         }
-
-        @media (max-width: 1080px) {
-
+        
+        @media (max-width: 1280px) {
+        
             :root {
-                --divider: 40%;
+                --divider: 50%;
             }
-
+        
             .left {
                 width: calc(var(--divider));
             }
-            
+        
+            .intro-text {
+                /* margin-top: 10vh; */
+                margin-right: 5vw;
+            }           
+        
             .right {
                 width: calc(100% - var(--divider));
             }
 
+            .svg-container {
+                height: 100vh;
+                /* width: 100%; */
+            }
         }
 
-        @media (max-width: 768px) {
-            
+        @media (max-width: 768px) {          
+
             .container {
                 flex-direction: column;
                 width: 100%;
@@ -122,21 +125,19 @@
             .right {
                 order: -1;
                 width: 100%;
-            }
-            
+            }            
+
             .svg-container {
-                height: 100%;
-                width: 100%;
+                height: auto;
             }
-            
+
             .intro-text {
                 color: #000000;
                 font-size: 1.1em;
-                margin-top: 5vw;
-                margin-left: 10vw;
-                margin-right: 10vw;
+                margin-top: 0;
+                margin-left: 5vw;
+                margin-right: 5vw;
             }
-
         }
 
     </style>
@@ -145,9 +146,9 @@
     <div class="container">
 
         <div class="navbar">
-            <a href="#home" class="nav-button">Home</a>
+            <a href="/" class="nav-button">Home</a>
             <a href="#M59" class="nav-button">M59</a>
-            <a href="#lefts" class="nav-button">Lefts</a>
+            <!-- <a href="/threelefts.html" class="nav-button">Lefts</a> -->
         </div>
     
         <div class="left">
@@ -162,11 +163,23 @@
         <div class="right">
 
             <div id="svg1" class="svg-container">
-                    <img src="Busto_new.svg" alt="Busto">
+                    <img src="Busto_new.svg" alt="MF Busto">
             </div>
 
             <div id="svg2" class="svg-container">
-                    <img src="Gnarly_new.svg" alt="Gnarly">
+                    <img src="Gnarly_new.svg" alt="MF Gnarly">
+            </div>
+
+            <div id="svg3" class="svg-container">
+                <img src="Sabotage_new.svg" alt="MF Sabotage">
+            </div>
+            
+            <div id="svg4" class="svg-container">
+                <img src="Senza_new.svg" alt="MF Senza">
+            </div>
+            
+            <div id="svg5" class="svg-container">
+                <img src="Kreta_new.svg" alt="MF Kreta">
             </div>
 
         </div>
