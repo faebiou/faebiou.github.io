@@ -4,13 +4,17 @@
 }
 
 @font-face {
-    font-family: 'MF Senza';
-    src: url('/MF_Senza-VF.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'MF Senza Text Regular';
+    src: url('MFSenzaText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MF Senza Text Bold';
+    src: url('MFSenzaText-Bold.ttf') format('truetype');
 }
 
 body {
-    font-family: 'MF Senza Text';
+    font-family: 'MF Senza Text Regular', monospace;
     margin: 0;
     padding: 0;
 }
@@ -31,7 +35,7 @@ body {
     padding: .5em 1em;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 700;
+    font-family: 'MF Senza Text Bold', monospace;
     font-size: 1em;
 }
 
@@ -55,7 +59,7 @@ body {
 a {
     color: #000000;
     text-decoration: none;
-    font-weight: 700;
+    font-family: 'MF Senza Text Bold', sans-serif, monospace;
 }
 
 a:hover  {
