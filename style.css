@@ -98,8 +98,8 @@ a:hover  {
     max-width: 1200px;
 }
 
-#first {
-    margin-top: 2em;
+#first, .bigass {
+    margin-top: 2.5em;
 }
 
 footer {
@@ -131,6 +131,7 @@ footer {
         height: 100vh;
         /* width: 100%; */
     }
+
 }
 
 @media (max-width: 768px) {          
@@ -159,5 +160,9 @@ footer {
         margin-top: 0;
         margin-left: 5vw;
         margin-right: 5vw;
+    }
+
+    .bigass {
+        margin-top: 4em;
     }
 }
