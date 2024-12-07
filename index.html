@@ -2,58 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta property="og:image" content="assets/favicon.svg">
-    <meta property="og:image:type" content="image/svg+xml">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <title>Projects by Fabio Pop</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Fabio Pop</title>
 </head>
 <body>
-    <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><img src="assets/favicon.svg" width="50" height="50"></a></li>
-            <li><a href="index.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <!-- <li><a href="lefts.html">Lefts</a></li> -->
-        </ul>
-        <ul>
-            <li class="hideOnMobile"><a href="index.html"><img src="assets/favicon.svg" width="50" height="50"></a></li>
-            <li class="hideOnMobile"><a href="index.html">Projects</a></li>
-            <li class="hideOnMobile"><a href="about.html">About</a></li>
-            <!-- <li class="hideOnMobile"><a href="lefts.html">Lefts</a></li> -->
-            <li class="menu-button" onclick=showSidebar()><a href="#"><img src="assets/favicon.svg" width="50" height="50"></a></li>
-        </ul>
-    </nav>
-    <div class="header" id="first"><a href="fonts/Busto.html"><img src="fonts/SVG/Busto_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Sabotage.html"><img src="fonts/SVG/Sabotage_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Maddy.html"><img src="fonts/SVG/Maddy_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Norma.html"><img src="fonts/SVG/Norma_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Gnarly.html"><img src="fonts/SVG/Gnarly_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Contra.html"><img src="fonts/SVG/Contra_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Kreta.html"><img src="fonts/SVG/Kreta_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Machette.html"><img src="fonts/SVG/Machette_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <div class="header"><a href="fonts/Senza.html"><img src="fonts/SVG/Senza_header.svg" width="auto" height="auto" class="svgImg"></a></div>
-    <footer class="wrap">
-        <p id="colofon">The projects on this page are very much still in progress. They haven&rsquo;t been released, mastered or refined either. They will get updates over time, but <a href="../about.html">let me know</a> if you&rsquo;d like to know more in the meantime. Most copy by yours truly with stacking & justification by <a href="https://max-esnee.com/stack-and-justify/" target="_blank">Max Esnée</a>.</p>
-    </footer>
+    <div class="container">
+
+        <div class="navbar">
+            <a href="/" class="nav-button">Home</a>
+            <a href="/M59.html" class="nav-button">M59</a>
+        </div>
+    
+        <div class="left">
+            <div class="intro-text">
+                <p>Hi. My name is Fabio Pop and I run M59, an accidental type foundry with <a href="/emfiftynine.html">fonts</a> like the one you are currently reading. All my projects are still very much in progress, but <a href="mailto:hi@faebiou.com">let me know</a> if you are interested in using any of them. I also play drums in a <a href="https://instagram.com/zakuszka.live" target="_blank">band,</a> enjoy terrible <a href="https://instagram.com/sacc.kabe" target="_blank">puns</a> in Hungarian, and I live in The Hague.</p>
+                <p>I am available as a freelance type or graphic designer as well – so feel free to reach out if you need a hand with anything related to type, branding, creative coding, or motion graphics – or just want to vent for a bit or something.</p>
+                <p>Find me on <a href="https://instagram.com/faebiou">instagram</a> or <a href="https://typo.social/@faebiou">mastodon</a> or say hi via <a href="mailto:hi@faebiou.com">hi@faebiou.com</a></p>
+                <div id="bigLogo"></div>
+            </div>
+        </div>
+        
+        <div class="right">
+
+            <div id="svg1" class="svg-container">
+                    <img src="SVG/slider/Busto_slider.svg" alt="MF Busto">
+            </div>
+
+            <div id="svg2" class="svg-container">
+                    <img src="SVG/slider/Gnarly_slider.svg" alt="MF Gnarly">
+            </div>
+
+            <div id="svg3" class="svg-container">
+                <img src="SVG/slider/Sabotage_slider.svg" alt="MF Sabotage">
+            </div>
+            
+            <div id="svg4" class="svg-container">
+                <img src="SVG/slider/Senza_slider.svg" alt="MF Senza">
+            </div>
+            
+            <div id="svg5" class="svg-container">
+                <img src="SVG/slider/Kreta_slider.svg" alt="MF Kreta">
+            </div>
+
+        </div>
     <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'flex';
+        const svgs = document.querySelectorAll('.svg-container');
+        let index = 0;
+
+        function getDisplayStyle() {
+            return window.matchMedia("(max-width: 768px)").matches ? 'block' : 'flex';
         }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'none';
+
+        function showNextSVG() {
+            svgs.forEach(function(svg, i) {
+                svg.style.display = (i === index) ? getDisplayStyle() : 'none';
+            });
+            index = (index + 1) % svgs.length;
         }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            showNextSVG();
+            setInterval(showNextSVG, 1000);
+        });
+        
     </script>
-    <script src="hover.js"></script>
 </body>
 </html>
-
