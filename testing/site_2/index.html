@@ -3,158 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works by Fabio Pop</title>
-    <style>
-        :root {
-            --divider: 30%;
-        }
-
-        @font-face {
-            font-family: 'MF Senza';
-            src: url('/Library/Fonts/MF_Senza-VF.ttf') format('opentype');
-            font-weight: normal;
-        }
-        
-        body {
-            font-family: 'MF Senza Text';
-            margin: 0;
-            padding: 0;
-        }
-        
-        .navbar {
-            position: fixed;
-            top: 1em;
-            width: 100%; 
-            display: flex;
-            justify-content: center;
-            gap: 1em;
-            z-index: 1000;
-        }
-        
-        .nav-button {
-            background-color: #000000;
-            color: #FFFFFF;
-            padding: .3em .9em;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 1em;
-            /* border: #FFFFFF solid .1em; */
-        }
-        
-        .left {
-            width: calc(var(--divider));
-        }
-        
-        .container {
-            display: flex;
-            overflow: hidden;
-        }
-        
-        .intro-text {
-            margin-top: 30vh;
-            margin-left: 5vw;
-            margin-right: 5vw;
-            font-size: 1.3em;
-            line-height: 1.3;
-        }
-        
-        .intro-text a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        
-        #bigLogo {
-            width: 6em;
-            height: 6em;
-            margin: auto;
-            background: url('favicon.svg') no-repeat center center;
-            background-size: contain;
-        }
-        
-        .right {
-            width: calc(100% - var(--divider));
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .svg-container {
-            margin: 0;
-            display: none;
-            width: 100%;
-        }
-        
-        @media (max-width: 1280px) {
-        
-            :root {
-                --divider: 50%;
-            }
-        
-            .left {
-                width: calc(var(--divider));
-            }
-        
-            .intro-text {
-                /* margin-top: 10vh; */
-                margin-right: 5vw;
-            }           
-        
-            .right {
-                width: calc(100% - var(--divider));
-            }
-
-            .svg-container {
-                height: 100vh;
-                /* width: 100%; */
-            }
-        }
-
-        @media (max-width: 768px) {          
-
-            .container {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .left {
-                width: 100%;
-            }
-
-            .right {
-                order: -1;
-                width: 100%;
-            }            
-
-            .svg-container {
-                height: auto;
-            }
-
-            .intro-text {
-                color: #000000;
-                font-size: 1.1em;
-                margin-top: 0;
-                margin-left: 5vw;
-                margin-right: 5vw;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="/style.css">
+    <title>Fabio Pop</title>
 </head>
 <body>
     <div class="container">
 
         <div class="navbar">
             <a href="/" class="nav-button">Home</a>
-            <a href="#M59" class="nav-button">M59</a>
-            <!-- <a href="/threelefts.html" class="nav-button">Lefts</a> -->
+            <a href="/M59.html" class="nav-button">M59</a>
         </div>
     
         <div class="left">
             <div class="intro-text">
-                <p>Hi. My name is Fabio Pop and I am a freelance type designer currently working on <a href="/M59">fonts</a> like the one you are reading now. I also play drums in a <a href="https://instagram.com/zakuszka.live" target="_blank">band,</a> enjoy terrible <a href="https://instagram.com/sacc.kabe" target="_blank">puns</a> in Hungarian, and I live in The Hague.</p>
-                <p>Besides type, I am available as a freelance art director as well, so reach out if you need a hand with anything related to typography, branding, creative coding, or motion – or just want to vent for a bit or something.</p>
+                <p>Hi. My name is Fabio Pop and I run M59, an accidental type foundry with <a href="/emfiftynine.html">fonts</a> like the one you are currently reading. All my projects are still very much in progress, but <a href="mailto:hi@faebiou.com">let me know</a> if you are interested in using any of them. I also play drums in a <a href="https://instagram.com/zakuszka.live" target="_blank">band,</a> enjoy terrible <a href="https://instagram.com/sacc.kabe" target="_blank">puns</a> in Hungarian, and I live in The Hague.</p>
+                <p>I am available as a freelance type or graphic designer as well – so feel free to reach out if you need a hand with anything related to type, branding, creative coding, or motion graphics – or just want to vent for a bit or something.</p>
                 <p>Find me on <a href="https://instagram.com/faebiou">instagram</a> or <a href="https://typo.social/@faebiou">mastodon</a> or say hi via <a href="mailto:hi@faebiou.com">hi@faebiou.com</a></p>
                 <div id="bigLogo"></div>
             </div>
@@ -163,23 +26,23 @@
         <div class="right">
 
             <div id="svg1" class="svg-container">
-                    <img src="Busto_new.svg" alt="MF Busto">
+                    <img src="SVG/slider/Busto_slider.svg" alt="MF Busto">
             </div>
 
             <div id="svg2" class="svg-container">
-                    <img src="Gnarly_new.svg" alt="MF Gnarly">
+                    <img src="SVG/slider/Gnarly_slider.svg" alt="MF Gnarly">
             </div>
 
             <div id="svg3" class="svg-container">
-                <img src="Sabotage_new.svg" alt="MF Sabotage">
+                <img src="SVG/slider/Sabotage_slider.svg" alt="MF Sabotage">
             </div>
             
             <div id="svg4" class="svg-container">
-                <img src="Senza_new.svg" alt="MF Senza">
+                <img src="SVG/slider/Senza_slider.svg" alt="MF Senza">
             </div>
             
             <div id="svg5" class="svg-container">
-                <img src="Kreta_new.svg" alt="MF Kreta">
+                <img src="SVG/slider/Kreta_slider.svg" alt="MF Kreta">
             </div>
 
         </div>

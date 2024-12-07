@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF Senza by M59</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="/" class="nav-button">Home</a>
+        <a href="/M59.html" class="nav-button">M59</a>
+    </div>
+
+    <div class="bigass">
+        <a href="/M59.html"><img src="/SVG/Senza.svg"></a>
+    </div>
+
+    <footer>
+        <p id="colofon">The projects on this page are very much still in progress. They haven&rsquo;t been released, mastered or refined either. They will get updates over time, but <a href="../about.html">let me know</a> if you&rsquo;d like to know more in the meantime. Most copy by yours truly with stacking and justification by <a href="https://max-esnee.com/stack-and-justify/" target="_blank">@maxesnee</a>.</p>
+
+        <script>
+            // Select all <img> elements with the class 'svgImg'
+            const svgImages = document.querySelectorAll('.svgImg');
+    
+            // Iterate over the NodeList and perform actions on each image if needed
+    
+            svgImages.forEach(img => {
+                // Store the original source
+                const originalSrc = img.src;
+    
+                // Add event listener for mouseover
+                img.addEventListener('mouseover', () => {
+                    // Change the source to the hover version
+                    img.src = originalSrc.replace('_header', '').replace('.svg', '_hover.svg');
+                });
+    
+                // Add event listener for mouseout
+                img.addEventListener('mouseout', () => {
+                    // Revert the source to the original
+                    img.src = originalSrc;
+                });
+            });
+        </script>
+    </footer>
+
+</body>
+</html>
+
