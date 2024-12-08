@@ -109,33 +109,7 @@ footer {
     padding: 0 2em 2em 2em;
 }
 
-@media (max-width: 1280px) {
-
-    :root {
-        --divider: 50%;
-    }
-
-    .left {
-        width: calc(var(--divider));
-    }
-
-    .intro-text {
-        /* margin-top: 10vh; */
-        margin-right: 5vw;
-    }           
-
-    .right {
-        width: calc(100% - var(--divider));
-    }
-
-    .svg-container {
-        height: 100vh;
-        /* width: 100%; */
-    }
-
-}
-
-@media (max-width: 768px) {          
+@media (max-width: 1200px) {          
 
     .container {
         flex-direction: column;
@@ -159,9 +133,9 @@ footer {
     .intro-text {
         color: #000000;
         font-size: 1.1em;
-        margin-top: 0;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin: auto;
+        max-width: 700px;
+        padding: 0 2em 2em 2em;
     }
 
     .bigass {
