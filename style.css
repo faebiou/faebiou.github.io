@@ -4,17 +4,12 @@
 }
 
 @font-face {
-    font-family: 'MF Senza Text Regular';
-    src: url('MFSenzaText-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'MF Senza Text Bold';
-    src: url('MFSenzaText-Bold.ttf') format('truetype');
+    font-family: 'MF Senza';
+    src: url('MF_Senza-VF.ttf') format('truetype');
 }
 
 body {
-    font-family: 'MF Senza Text Regular', monospace;
+    font-family: 'MF Senza', monospace;
     margin: 0;
     padding: 0;
 }
@@ -32,10 +27,11 @@ body {
 .nav-button {
     background-color: #000000;
     color: #FFFFFF;
-    padding: .4em .7em .3em .7em;
+    padding: .4em .7em .5em .7em;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'MF Senza Text Bold', monospace;
+    font-family: 'MF Senza', monospace;
+    font-weight: 700;
     font-size: 1em;
 }
 
@@ -59,7 +55,8 @@ body {
 a {
     color: #000000;
     text-decoration: none;
-    font-family: 'MF Senza Text Bold', monospace;
+    font-family: 'MF Senza', monospace;
+    font-weight: 700;
 }
 
 a:hover  {
