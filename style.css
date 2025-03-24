@@ -103,7 +103,7 @@ a:hover  {
 footer {
     margin: auto;
     max-width: 40em;
-    padding: 0 2em 2em 2em;
+    padding: 4em 2em 6em 2em;
 }
 
 @media (max-width: 1200px) {          
@@ -137,5 +137,11 @@ footer {
 
     .bigass {
         margin-top: 4em;
+    }
+
+    footer {
+        margin: auto;
+        max-width: 40em;
+        padding: 0 2em 2em 2em;
     }
 }
