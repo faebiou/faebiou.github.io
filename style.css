@@ -57,6 +57,7 @@ a {
     text-decoration: none;
     font-family: 'MF Senza', monospace;
     font-weight: 700;
+    font-synthesis: none;
 }
 
 a:hover  {
