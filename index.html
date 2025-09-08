@@ -24,7 +24,7 @@
             <div class="intro-text">
                 <p>Hi. My name is Fabio Pop and I run M59, an accidental type foundry with <a href="/M59.html">fonts</a> like the one you are now reading. All my projects are still very much in progress, but <a href="mailto:hi@faebiou.com">let me know</a> if you are interested in using any of them. I also play drums in a <a href="https://instagram.com/zakuszka.live" target="_blank">band,</a> enjoy terrible <a href="https://instagram.com/sacc.kabe" target="_blank">puns</a> in Hungarian, and I live in The Hague.</p>
                 <p>I am available as a freelance type and graphic designer as well – so get in touch if you need a hand with anything related to type or branding, or just want to vent for a bit or something.</p>
-                <p>Find me on <a href="https://bsky.app/profile/faebiou.com">Bluesky</a> or <a href="https://typo.social/@faebiou">Mastodon</a> or say hi via <a href="mailto:hi@faebiou.com">email.</a> I am not really on instagram anymore, but I did start a <a href="https://buttondown.com/threelefts/">newsletter</a> to write about things I am into. <a href="https://buttondown.com/threelefts/archive/three-lefts-002-more-everything/">This is</a> the latest edition.</p>
+                <p>Find me on <a href="https://typo.social/@faebiou">Mastodon</a> or say hi via <a href="mailto:hi@faebiou.com">email</a> and although I am not really on instagram, I still check my DMs. I also have a <a href="https://buttondown.com/threelefts/">newsletter</a> about things I am into. <a href="https://buttondown.com/threelefts/archive/three-lefts-002-more-everything/">This is</a> the latest edition.</p>
                 <div id="bigLogo"></div>
             </div>
         </div>
@@ -32,60 +32,86 @@
         <div class="right">
 
             <div id="svg1" class="svg-container">
-                    <img src="SVG/slider/Busto_slider.svg" alt="MF Busto">
+                    <img data-src="SVG/slider/Busto_slider.svg" alt="MF Busto">
             </div>
 
             <div id="svg2" class="svg-container">
-                    <img src="SVG/slider/Gnarly_slider.svg" alt="MF Gnarly">
+                    <img data-src="SVG/slider/Gnarly_slider.svg" alt="MF Gnarly">
             </div>
 
             <div id="svg3" class="svg-container">
-                <img src="SVG/slider/Sabotage_slider.svg" alt="MF Sabotage">
+                <img data-src="SVG/slider/Sabotage_slider.svg" alt="MF Sabotage">
             </div>
             
             <div id="svg4" class="svg-container">
-                <img src="SVG/slider/Senza_slider.svg" alt="MF Senza">
+                <img data-src="SVG/slider/Senza_slider.svg" alt="MF Senza">
             </div>
             
             <div id="svg5" class="svg-container">
-                <img src="SVG/slider/Kreta_slider.svg" alt="MF Kreta">
+                <img data-src="SVG/slider/Kreta_slider.svg" alt="MF Kreta">
             </div>
 
             <div id="svg6" class="svg-container">
-                <img src="SVG/slider/Maddy_slider.svg" alt="MF Maddy">
+                <img data-src="SVG/slider/Maddy_slider.svg" alt="MF Maddy">
             </div>
 
             <div id="svg7" class="svg-container">
-                <img src="SVG/slider/Contra_slider.svg" alt="MF Contra">
+                <img data-src="SVG/slider/Contra_slider.svg" alt="MF Contra">
             </div>
 
             <div id="svg8" class="svg-container">
-                <img src="SVG/slider/Machette_slider.svg" alt="MF Machette">
+                <img data-src="SVG/slider/Machette_slider.svg" alt="MF Machette">
             </div>
 
             <div id="svg9" class="svg-container">
-                <img src="SVG/slider/NormaExtra_slider.svg" alt="MF Normavaganza Extra">
+                <img data-src="SVG/slider/NormaExtra_slider.svg" alt="MF Normavaganza Extra">
             </div>
 
         </div>
     <script>
+
         const svgs = document.querySelectorAll('.svg-container');
         let index = 0;
+        let interval;
 
         function getDisplayStyle() {
             return window.matchMedia("(max-width: 768px)").matches ? 'block' : 'flex';
         }
 
-        function showNextSVG() {
-            svgs.forEach(function(svg, i) {
-                svg.style.display = (i === index) ? getDisplayStyle() : 'none';
+        function showSVG(i) {
+            svgs.forEach((svg, j) => {
+                svg.style.display = (i === j) ? getDisplayStyle() : 'none';
             });
-            index = (index + 1) % svgs.length;
         }
 
-        document.addEventListener('DOMContentLoaded', (event) => {
-            showNextSVG();
-            setInterval(showNextSVG, 1000);
+        function loadAndShow(index) {
+            const svg = svgs[index];
+            const img = svg.querySelector('img');
+
+            if (!img.dataset.loaded) {
+                img.src = img.dataset.src;
+                img.dataset.loaded = "true";
+
+                img.onload = () => {
+                    showSVG(index);
+                    scheduleNext();
+                };
+            } else {
+                showSVG(index);
+                scheduleNext();
+            }
+        }
+
+        function scheduleNext() {
+            clearTimeout(interval); // just in case
+            interval = setTimeout(() => {
+                index = (index + 1) % svgs.length;
+                loadAndShow(index);
+            }, 1000); // 1 second per frame
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAndShow(index);
         });
         
     </script>
