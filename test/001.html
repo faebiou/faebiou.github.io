@@ -10,35 +10,60 @@
     <meta property="og:url" content="https://faebiou.com">
     <title>Fabio Pop</title>
     <style>
+        :root {
+            --fontsize: clamp(1.5rem, 0.2rem + 4vw, 1.6rem);
+            --bottommargin: clamp(5rem, 0.2rem + 4vw, 30rem);
+            --lineheight: clamp(2rem, 0.2rem + 4vw, 1.2rem);
+            --spacing: clamp(0px, 0.2rem + 4vw, 1px);
+            --maxw: 600px;
+        }
 
         body {
-            max-width: 768px;
             margin: auto;
-            padding: 5vw;
-            margin: 0;
+            font-family: sans-serif, monospace;
+            letter-spacing: var(--spacing);
+            line-height: var(--lineheight);
         }
 
         p {
-            font-family: "IBM Plex Mono", monospace;
-            margin-bottom: 3vw;
+            font-size: var(--fontsize);
+            margin-bottom: var(--fontsize);
         }
 
-        .intro-text {
-            margin-top: 100px;
-            background-color: #00ffff;
+        .contain, .footer {
+            padding: var(--fontsize);
+            position: fixed;
+            bottom: 0;
+        }
+
+        .intro {
+            max-width: var(--maxw);
+            margin-bottom: var(--bottommargin);
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #333;
+            color: #888;
         }
 
     </style>
 </head>
 <body>
-    <div class="intro-text">
-        <p> Hi. My name is Fabio Pop and I like drawing and letters and drawing letters.
+    <div class="contain">
 
-        <p>I also run M59, an accidental type foundry with fonts like <a href="">this one</a>. A new website might be under construction with more updates underway but did not hear this from me.
-        
-        <p>Find me on <a href="https://typo.social/@faebiou">Mastodon</a> or say hi in <a href="mailto:hi@faebiou.com">an email</a> if you would like to get in touch. I am not really on <a href="instagram.com/faebiou">instagram</a> but I still check my DMs.</p>
-            
-        <p>Sometimes I also send out an occasional newsletter with more words. <a href="https://buttondown.com/threelefts/archive/three-lefts-002-more-everything/">This is</a> the latest edition.</p>
-    </div>
+            <div class="intro">
+                <p> Hi. My name is Fabio Pop and I like drawing and letters and drawing letters. I work as a freelance type designer but I also run M59, an accidental type foundry with fonts like <a href="https://www.futurefonts.com/emfiftynine/mf-normavaganza-extra" target="_blank">this one</a>. A new website might be under construction with more updates underway. Who's to say.</p>
+                
+                <p>Find me on <a href="https://typo.social/@faebiou" target="_blank">Mastodon</a> or say hi in <a href="mailto:hi@faebiou.com">an email</a> if you would like to get in touch. I am not really on <a href="instagram.com/faebiou" target="_blank">instagram</a> anymore but I still check my DMs.</p>
+                    
+                <p>Sometimes I also send out an occasional newsletter with more words. <a href="https://buttondown.com/threelefts/archive/three-lefts-002-more-everything/" target="_blank">This is</a> the latest edition.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            This website was written by Fabio Pop, a human person.
+        </div>
+    
 </body>
 </html>
