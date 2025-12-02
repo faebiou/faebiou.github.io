@@ -10,50 +10,52 @@
     <meta property="og:url" content="https://faebiou.com">
     <title>Fabio Pop</title>
     <style>
-        :root {
-            --fontsize: clamp(1.5rem, 0.2rem + 4vw, 1.6rem);
-            --bottommargin: clamp(5rem, 0.2rem + 4vw, 30rem);
-            --lineheight: clamp(2rem, 0.2rem + 4vw, 1.2rem);
-            --spacing: clamp(0px, 0.2rem + 4vw, 1px);
-            --maxw: 600px;
-        }
+        /* @link https://utopia.fyi/clamp/calculator?a=360,1200,9—18|32—64|0—1200|11—22|2—0 */
 
         body {
             margin: auto;
-            font-family: sans-serif, monospace;
-            letter-spacing: var(--spacing);
-            line-height: var(--lineheight);
+            font-family: sans-serif;
+            letter-spacing: .4pt;
         }
-
+        
         p {
-            font-size: var(--fontsize);
-            margin-bottom: var(--fontsize);
+            font-size: 9pt;
+            max-width: 300px;
+            line-height: 11pt;
         }
 
-        .contain, .footer {
-            padding: var(--fontsize);
+        .contain {
+            padding: 9pt;
             position: fixed;
             bottom: 0;
         }
 
         .intro {
-            max-width: var(--maxw);
-            margin-bottom: var(--bottommargin);
+            margin-bottom: 36pt;
         }
 
         .footer {
-            width: 100%;
-            background-color: #333;
+            width: auto;
+            position: fixed;
+            bottom: 0;
+            padding: 9pt;
+            font-size: 8pt;
+            /* background-color: #333; */
             color: #888;
         }
 
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="contain">
 
             <div class="intro">
-                <p> Hi. My name is Fabio Pop and I like drawing and letters and drawing letters. I work as a freelance type designer but I also run M59, an accidental type foundry with fonts like <a href="https://www.futurefonts.com/emfiftynine/mf-normavaganza-extra" target="_blank">this one</a>. A new website might be under construction with more updates underway. Who's to say.</p>
+                <p> Hi. My name is Fabio Pop and I am a freelance type designer by day but by night I also run <a href="emfiftynine.com">M59</a> – an accidental type foundry with fonts like <a href="https://www.futurefonts.com/emfiftynine/mf-normavaganza-extra" target="_blank">this one.</a></p>
                 
                 <p>Find me on <a href="https://typo.social/@faebiou" target="_blank">Mastodon</a> or say hi in <a href="mailto:hi@faebiou.com">an email</a> if you would like to get in touch. I am not really on <a href="instagram.com/faebiou" target="_blank">instagram</a> anymore but I still check my DMs.</p>
                     
