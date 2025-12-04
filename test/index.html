@@ -16,11 +16,12 @@
     <style>
         :root {
 
-            /* @link https://utopia.fyi/clamp/calculator?a=425,768,1.1—0.6|20—22|16—18 */
-
-            --fs: clamp(1rem, 0.8451rem + 0.5831vw, 1.125rem); 
-            --lh: clamp(1.25rem, 1.0951rem + 0.5831vw, 1.375rem);
-            --track: clamp(0.0375rem, 0.1075rem + -0.1458vw, 0.0688rem);
+            /* @link https://utopia.fyi/clamp/calculator?a=390,768,1.1—0.6|15—18|20—22|9—11 */
+            
+            --fs: clamp(0.9375rem, 0.744rem + 0.7937vw, 1.125rem);
+            --lh: clamp(1.25rem, 1.121rem + 0.5291vw, 1.375rem);
+            --track: clamp(0.0375rem, 0.101rem + -0.1323vw, 0.0688rem);
+            --foot: clamp(0.5625rem, 0.4335rem + 0.5291vw, 0.6875rem);
 
             --dark_bg: #333;
             --dark_type: #ddd;
@@ -53,7 +54,7 @@
             position: fixed;
             bottom: 0;
             padding: var(--fs);
-            font-size: .7rem;
+            font-size: var(--foot);
             /* background-color: #333; */
             color: #888;
         }
